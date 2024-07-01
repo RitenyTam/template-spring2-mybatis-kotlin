@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/test/mybatis")
 class TestController @Autowired constructor(val accountMapper: AccountMapper) {
 
     @GetMapping("/")
