@@ -1,6 +1,6 @@
-package com.riteny.exception
+package com.riteny.exception.controller
 
-import com.riteny.exception.controller.TestException
+import com.riteny.exception.TestException
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

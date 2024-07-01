@@ -1,4 +1,4 @@
-package com.riteny.exception.controller
+package com.riteny.exception
 
 import com.alibaba.fastjson2.JSONObject
 import com.riteny.util.exception.core.api.CommonApiExceptionHandler
