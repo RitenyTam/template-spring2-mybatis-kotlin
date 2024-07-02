@@ -44,9 +44,6 @@ class PropertiesFileInternationalizationDatasource : InternationalizationDatasou
                     }
                 }
             }
-
-            println(internationalizationProfileMap)
-
         } catch (e: Exception) {
             logger.error("Internationalization datasource init failed . ")
             throw RuntimeException("Internationalization datasource init failed . ", e)
