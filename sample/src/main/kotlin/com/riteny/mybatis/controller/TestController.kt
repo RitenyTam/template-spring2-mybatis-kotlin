@@ -1,6 +1,7 @@
 package com.riteny.mybatis.controller
 
 import com.mybatisflex.core.query.QueryWrapper
+import com.riteny.exception.TestException
 import com.riteny.mybatis.entity.Account
 import com.riteny.mybatis.mapper.AccountMapper
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,10 +12,10 @@ import java.util.*
 
 @RestController
 @RequestMapping("/test/mybatis")
-class TestController @Autowired constructor(val accountMapper: AccountMapper) {
+open class TestController @Autowired constructor(open var accountMapper: AccountMapper) {
 
     @GetMapping("/")
-    fun test() {
+    open fun testMybatis(): List<Account> {
         val queryWrapper = QueryWrapper()
             .select().eq("id", 1)
 
@@ -26,7 +27,6 @@ class TestController @Autowired constructor(val accountMapper: AccountMapper) {
         val account = accountMapper.selectOneByQuery(queryWrapper)
         val accounts = accountMapper.selectAll()
 
-        println(account)
-        println(accounts)
+        return accounts
     }
 }

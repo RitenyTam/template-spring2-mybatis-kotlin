@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/test/exception")
-class TestExceptionController {
+open class TestExceptionController {
 
     @GetMapping("/")
-    fun testException(): String {
+    open fun testException(): String {
         throw TestException("0", "test.index", "en_us")
     }
 }
